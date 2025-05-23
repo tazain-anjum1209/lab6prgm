@@ -1,14 +1,10 @@
 ---
-- name: Basic Server Setup
+- name: Deploy Maven Artifact
   hosts: local
   become: yes
 
   tasks:
-    - name: Update apt cache
-      apt:
-        update_cache: yes
-
-    - name: Install curl
-      apt:
-        name: curl
-        state: present
+    - name: Copy the artifact to the deployment directory
+      copy:
+      src:
+      dest:
